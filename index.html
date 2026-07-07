@@ -6,9 +6,7 @@
 <title>舞号门 · 7月目标作战室</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
-  
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  
   body {
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
     background: linear-gradient(145deg, #FFF5EB 0%, #FFE8D6 30%, #FFDAB9 60%, #FFD4B8 100%);
@@ -16,9 +14,7 @@
     padding: 16px;
     color: #2D1B0E;
   }
-  
   .container { max-width: 480px; margin: 0 auto; }
-  
   .header {
     text-align: center;
     padding: 20px 16px;
@@ -41,7 +37,6 @@
   .header h1 { font-size: 22px; font-weight: 900; letter-spacing: 2px; position: relative; }
   .header .subtitle { font-size: 13px; opacity: 0.9; margin-top: 6px; position: relative; }
   .header .update-time { font-size: 11px; opacity: 0.7; margin-top: 8px; position: relative; }
-  
   .team-progress {
     background: white;
     border-radius: 16px;
@@ -56,7 +51,6 @@
   .progress-bar { height: 12px; background: #F0E6D6; border-radius: 6px; margin-top: 10px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, #FF8C42, #FF6B35, #E85D26); border-radius: 6px; transition: width 1s ease; }
   .progress-info { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: #888; }
-  
   .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
   .stat-card {
     background: white;
@@ -67,7 +61,6 @@
   }
   .stat-card .value { font-size: 22px; font-weight: 900; color: #FF6B35; }
   .stat-card .label { font-size: 11px; color: #888; margin-top: 4px; }
-  
   .person-section { margin-top: 14px; }
   .person-card {
     background: white;
@@ -84,7 +77,6 @@
   .person-bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
   .bar-yxk { background: linear-gradient(90deg, #FF8C42, #FF6B35); }
   .bar-wyy { background: linear-gradient(90deg, #FFB347, #FF8C42); }
-  
   .daily-section {
     background: white;
     border-radius: 16px;
@@ -98,13 +90,18 @@
   .daily-bar-fill { width: 100%; background: linear-gradient(180deg, #FF8C42, #FFB347); border-radius: 4px 4px 0 0; min-height: 4px; transition: height 0.5s ease; }
   .daily-bar-label { font-size: 10px; color: #999; margin-top: 4px; }
   .daily-bar-value { font-size: 9px; color: #FF6B35; margin-bottom: 2px; font-weight: 600; }
-  
   .footer {
     text-align: center;
     padding: 16px;
     margin-top: 14px;
     font-size: 11px;
     color: #999;
+  }
+  .note {
+    text-align: center;
+    font-size: 10px;
+    color: #bbb;
+    margin-top: 6px;
   }
 </style>
 </head>
@@ -114,20 +111,20 @@
   <div class="header">
     <h1>🔥 7月目标作战室</h1>
     <div class="subtitle">舞号门 · 用户运营团队</div>
-    <div class="update-time">数据更新：2026-07-07 16:55</div>
+    <div class="update-time">数据更新：2026-07-07 17:13</div>
   </div>
   
   <div class="team-progress">
     <div class="label">📊 团队总进度</div>
     <div class="numbers">
-      <span class="current">¥206,483</span>
+      <span class="current">¥149,184</span>
       <span class="target">/ ¥379,210</span>
     </div>
     <div class="progress-bar">
-      <div class="progress-fill" style="width: 54.5%"></div>
+      <div class="progress-fill" style="width: 39.3%"></div>
     </div>
     <div class="progress-info">
-      <span>进度 54.5%</span>
+      <span>进度 39.3%</span>
       <span>时间 22.6%</span>
       <span>🚀 超前！</span>
     </div>
@@ -139,15 +136,15 @@
       <div class="label">📋 留资总数</div>
     </div>
     <div class="stat-card">
-      <div class="value">73</div>
+      <div class="value">71</div>
       <div class="label">✅ 成交单数</div>
     </div>
     <div class="stat-card">
-      <div class="value">25.4%</div>
+      <div class="value">24.7%</div>
       <div class="label">📈 转化率</div>
     </div>
     <div class="stat-card">
-      <div class="value">¥2,829</div>
+      <div class="value">¥2,101</div>
       <div class="label">💰 客单价</div>
     </div>
   </div>
@@ -186,42 +183,44 @@
     <div class="daily-title">📅 每日成交趋势</div>
     <div class="daily-chart">
       <div class="daily-bar">
-        <div class="daily-bar-value">5.7万</div>
-        <div class="daily-bar-fill" style="height: 80px"></div>
+        <div class="daily-bar-value">2.7万</div>
+        <div class="daily-bar-fill" style="height: 48px"></div>
         <div class="daily-bar-label">7/1</div>
       </div>
       <div class="daily-bar">
         <div class="daily-bar-value">7k</div>
-        <div class="daily-bar-fill" style="height: 9px"></div>
+        <div class="daily-bar-fill" style="height: 11px"></div>
         <div class="daily-bar-label">7/2</div>
       </div>
       <div class="daily-bar">
         <div class="daily-bar-value">2.7万</div>
-        <div class="daily-bar-fill" style="height: 37px"></div>
+        <div class="daily-bar-fill" style="height: 46px"></div>
         <div class="daily-bar-label">7/3</div>
       </div>
       <div class="daily-bar">
         <div class="daily-bar-value">2.4万</div>
-        <div class="daily-bar-fill" style="height: 33px"></div>
+        <div class="daily-bar-fill" style="height: 41px"></div>
         <div class="daily-bar-label">7/4</div>
       </div>
       <div class="daily-bar">
         <div class="daily-bar-value">4.6万</div>
-        <div class="daily-bar-fill" style="height: 64px"></div>
+        <div class="daily-bar-fill" style="height: 80px"></div>
         <div class="daily-bar-label">7/5</div>
       </div>
       <div class="daily-bar">
-        <div class="daily-bar-value">3.7万</div>
-        <div class="daily-bar-fill" style="height: 51px"></div>
+        <div class="daily-bar-value">8k</div>
+        <div class="daily-bar-fill" style="height: 14px"></div>
         <div class="daily-bar-label">7/6</div>
       </div>
       <div class="daily-bar">
         <div class="daily-bar-value">1.0万</div>
-        <div class="daily-bar-fill" style="height: 14px"></div>
+        <div class="daily-bar-fill" style="height: 17px"></div>
         <div class="daily-bar-label">7/7</div>
       </div>
     </div>
   </div>
+  
+  <div class="note">* 不含师资班业绩（计入8月）</div>
   
   <div class="footer">
     💪 每一天都在靠近目标 · 数据每日更新
