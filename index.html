@@ -35,13 +35,14 @@
   .header h1 { font-size: 22px; font-weight: 900; letter-spacing: 2px; position: relative; }
   .header .subtitle { font-size: 13px; opacity: 0.9; margin-top: 6px; position: relative; }
   .header .update-time { font-size: 11px; opacity: 0.7; margin-top: 8px; position: relative; }
-  .team-progress {
+  .section {
     background: white;
     border-radius: 16px;
-    padding: 20px;
+    padding: 16px;
     margin-top: 14px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
+  .section-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: #2D1B0E; }
   .team-progress .label { font-size: 13px; color: #8B6914; font-weight: 500; }
   .team-progress .numbers { display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px; }
   .team-progress .current { font-size: 28px; font-weight: 900; color: #FF6B35; }
@@ -59,6 +60,24 @@
   }
   .stat-card .value { font-size: 22px; font-weight: 900; color: #FF6B35; }
   .stat-card .label { font-size: 11px; color: #888; margin-top: 4px; }
+  
+  .channel-card {
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #FFD4B8;
+  }
+  .channel-header { display: flex; justify-content: space-between; align-items: center; }
+  .channel-icon { font-size: 18px; margin-right: 6px; }
+  .channel-name { font-size: 14px; font-weight: 700; }
+  .channel-pct { font-size: 16px; font-weight: 900; color: #FF6B35; }
+  .channel-detail { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: #666; }
+  .channel-bar { height: 8px; background: #F0E6D6; border-radius: 4px; margin-top: 8px; overflow: hidden; }
+  .channel-bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+  .bar-live { background: linear-gradient(90deg, #FF6B35, #E85D26); }
+  .bar-regular { background: linear-gradient(90deg, #FFB347, #FF8C42); }
+  
   .person-section { margin-top: 14px; }
   .person-card {
     background: white;
@@ -75,6 +94,7 @@
   .person-bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
   .bar-yxk { background: linear-gradient(90deg, #FF8C42, #FF6B35); }
   .bar-wyy { background: linear-gradient(90deg, #FFB347, #FF8C42); }
+  
   .daily-section {
     background: white;
     border-radius: 16px;
@@ -109,10 +129,10 @@
   <div class="header">
     <h1>🔥 7月目标作战室</h1>
     <div class="subtitle">舞号门 · 用户运营团队</div>
-    <div class="update-time">数据更新：2026-07-07 17:26</div>
+    <div class="update-time">数据更新：2026-07-07 17:30</div>
   </div>
   
-  <div class="team-progress">
+  <div class="section team-progress">
     <div class="label">📊 团队总进度</div>
     <div class="numbers">
       <span class="current">¥149,184</span>
@@ -128,26 +148,45 @@
     </div>
   </div>
   
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="value">287</div>
-      <div class="label">📋 留资总数</div>
+  <div class="section">
+    <div class="section-title">🎯 渠道保底目标</div>
+    
+    <div class="channel-card">
+      <div class="channel-header">
+        <div><span class="channel-icon">📺</span><span class="channel-name">直播成交</span></div>
+        <span class="channel-pct">34%</span>
+      </div>
+      <div class="channel-detail">
+        <span>34单 / 100单</span>
+        <span>¥77,520 / ¥228,000</span>
+      </div>
+      <div class="channel-bar">
+        <div class="channel-bar-fill bar-live" style="width: 34%"></div>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="value">71</div>
-      <div class="label">✅ 成交单数</div>
+    
+    <div class="channel-card">
+      <div class="channel-header">
+        <div><span class="channel-icon">💬</span><span class="channel-name">咨询转化</span></div>
+        <span class="channel-pct">31%</span>
+      </div>
+      <div class="channel-detail">
+        <span>37单 / 120单</span>
+        <span>¥71,664 / ¥232,000</span>
+      </div>
+      <div class="channel-bar">
+        <div class="channel-bar-fill bar-regular" style="width: 31%"></div>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="value">24.7%</div>
-      <div class="label">📈 转化率</div>
-    </div>
-    <div class="stat-card">
-      <div class="value">¥2,101</div>
-      <div class="label">💰 客单价</div>
+    
+    <div style="text-align:center; margin-top:10px; font-size:12px; color:#888;">
+      📈 转化率：24.7% / 目标24.4% ✅
     </div>
   </div>
   
-  <div class="person-section">
+  <div class="section">
+    <div class="section-title">👥 个人目标（6:4拆分）</div>
+    
     <div class="person-card">
       <div class="person-header">
         <span class="person-name">👩 叶小鲲（60%）</span>
@@ -174,6 +213,17 @@
       <div class="person-bar">
         <div class="person-bar-fill bar-wyy" style="width: 15.5%"></div>
       </div>
+    </div>
+  </div>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="value">287</div>
+      <div class="label">📋 留资总数</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">¥2,101</div>
+      <div class="label">💰 客单价</div>
     </div>
   </div>
   
