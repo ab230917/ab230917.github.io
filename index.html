@@ -3,189 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<title>舞号门7月销售看板</title>
+<title>7月销售看板</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif; background: linear-gradient(135deg, #FFF5E6 0%, #FFE8CC 100%); min-height: 100vh; padding: 16px; color: #333; }
-.container { max-width: 480px; margin: 0 auto; }
-.header { background: linear-gradient(135deg, #FF8C42, #FF6B35); border-radius: 20px; padding: 24px; color: white; text-align: center; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(255,107,53,0.3); }
-.header h1 { font-size: 22px; margin-bottom: 4px; }
-.header .subtitle { font-size: 13px; opacity: 0.9; }
-.header .update-time { font-size: 11px; opacity: 0.7; margin-top: 6px; }
-.card { background: white; border-radius: 16px; padding: 20px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-.card-title { font-size: 15px; font-weight: 600; color: #FF6B35; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
-.big-number { font-size: 32px; font-weight: 700; color: #FF6B35; }
-.big-number .unit { font-size: 14px; color: #999; font-weight: 400; }
-.progress-wrap { margin: 10px 0; }
-.progress-label { display: flex; justify-content: space-between; font-size: 12px; color: #666; margin-bottom: 4px; }
-.progress-bar { height: 12px; background: #F0F0F0; border-radius: 6px; overflow: hidden; }
-.progress-fill { height: 100%; border-radius: 6px; transition: width 0.6s ease; }
-.fill-orange { background: linear-gradient(90deg, #FF8C42, #FF6B35); }
-.fill-green { background: linear-gradient(90deg, #4CAF50, #45a049); }
-.fill-blue { background: linear-gradient(90deg, #42A5F5, #1E88E5); }
-.fill-purple { background: linear-gradient(90deg, #AB47BC, #8E24AA); }
-.fill-pink { background: linear-gradient(90deg, #EC407A, #D81B60); }
-.stats-row { display: flex; gap: 10px; margin-top: 12px; }
-.stat-box { flex: 1; background: #FFF8F0; border-radius: 10px; padding: 12px; text-align: center; }
-.stat-value { font-size: 20px; font-weight: 700; color: #FF6B35; }
-.stat-label { font-size: 11px; color: #999; margin-top: 2px; }
-.person-card { background: linear-gradient(135deg, #FFF8F0, #FFF0E0); border-radius: 14px; padding: 16px; margin-bottom: 10px; border: 1px solid #FFE0B2; }
-.person-name { font-size: 16px; font-weight: 600; color: #E65100; margin-bottom: 10px; }
-.mini-progress { margin: 8px 0; }
-.mini-label { display: flex; justify-content: space-between; font-size: 11px; color: #666; margin-bottom: 3px; }
-.mini-bar { height: 8px; background: #F0F0F0; border-radius: 4px; overflow: hidden; }
-.mini-fill { height: 100%; border-radius: 4px; }
-.target-tag { display: inline-block; font-size: 11px; background: #FF6B35; color: white; padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
-.channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-.channel-box { background: #FFF8F0; border-radius: 10px; padding: 12px; text-align: center; }
-.channel-value { font-size: 18px; font-weight: 700; }
-.channel-label { font-size: 11px; color: #999; margin-top: 2px; }
-.conv-badge { display: inline-block; background: #4CAF50; color: white; padding: 3px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; }
-.footer { text-align: center; padding: 16px; font-size: 11px; color: #BBB; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:#f5f5f5; color:#1a1a1a; padding:24px; }
+.header { text-align:center; margin-bottom:32px; }
+.header h1 { font-size:24px; font-weight:600; letter-spacing:1px; }
+.header .date { font-size:13px; color:#999; margin-top:6px; }
+.card { background:#fff; border-radius:10px; padding:24px; margin-bottom:16px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+.card h2 { font-size:15px; font-weight:600; color:#666; margin-bottom:16px; text-transform:uppercase; letter-spacing:2px; }
+.total-row { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
+.total-amount { font-size:36px; font-weight:700; }
+.total-target { font-size:16px; color:#999; }
+.progress-bar { height:8px; background:#e8e8e8; border-radius:4px; overflow:hidden; margin:12px 0; }
+.progress-fill { height:100%; border-radius:4px; transition:width .6s ease; }
+.fill-orange { background:#e67e22; }
+.fill-dark { background:#333; }
+.fill-green { background:#27ae60; }
+.progress-label { font-size:13px; color:#999; text-align:right; }
+.person-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.person-card { background:#fff; border-radius:10px; padding:24px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+.person-card h3 { font-size:18px; font-weight:600; margin-bottom:4px; }
+.person-card .amount { font-size:28px; font-weight:700; margin-bottom:2px; }
+.person-card .target { font-size:13px; color:#999; margin-bottom:16px; }
+.channel-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #f0f0f0; }
+.channel-row:last-child { border-bottom:none; }
+.channel-name { font-size:14px; color:#555; }
+.channel-value { font-size:14px; font-weight:600; }
+.channel-bar { flex:1; max-width:120px; margin:0 16px; }
+.channel-bar .progress-bar { height:5px; margin:0; }
+.channel-bar .progress-fill { height:100%; }
+.channel-detail { font-size:12px; color:#aaa; }
+.channel-target { font-size:12px; color:#bbb; }
+@media(max-width:600px){ .person-grid{grid-template-columns:1fr;} body{padding:12px;} }
 </style>
 </head>
 <body>
-<div class="container">
 
-<!-- Header -->
 <div class="header">
-<h1>🔥 舞号门7月销售看板</h1>
-<div class="subtitle">古法身韵 · 月度目标追踪</div>
-<div class="update-time">数据更新于 2026-07-08 17:06</div>
+  <h1>7月销售业绩看板</h1>
+  <div class="date">数据更新于 2026年7月8日</div>
 </div>
 
-<!-- Total Overview -->
+<!-- 总目标 -->
 <div class="card">
-<div class="card-title">📊 全渠道总目标</div>
-<div style="display:flex;align-items:baseline;gap:8px;">
-<span class="big-number">¥18.2万</span>
-<span style="font-size:13px;color:#999;">/ ¥60.0万</span>
-</div>
-<div class="progress-wrap">
-<div class="progress-label">
-<span>完成 30.3%</span>
-<span>剩余 ¥41.8万</span>
-</div>
-<div class="progress-bar">
-<div class="progress-fill fill-orange" style="width:30.3%"></div>
-</div>
-</div>
-<div class="stats-row">
-<div class="stat-box">
-<div class="stat-value">301</div>
-<div class="stat-label">7月留资</div>
-</div>
-<div class="stat-box">
-<div class="stat-value">81</div>
-<div class="stat-label">成交单数</div>
-</div>
-<div class="stat-box">
-<div class="stat-value"><span class="conv-badge">26.9%</span></div>
-<div class="stat-label">转化率</div>
-</div>
-</div>
+  <h2>总目标</h2>
+  <div class="total-row">
+    <div class="total-amount">¥133,904</div>
+    <div class="total-target">/ ¥600,000</div>
+  </div>
+  <div class="progress-bar"><div class="progress-fill fill-orange" style="width:22.3%"></div></div>
+  <div class="progress-label">完成率 22.3%</div>
 </div>
 
-<!-- Channel Overview -->
+<!-- 渠道目标 -->
 <div class="card">
-<div class="card-title">📡 渠道保底目标</div>
-
-<div class="mini-progress">
-<div class="mini-label">
-<span>🔴 直播 <b>41单</b> / 100单</span>
-<span>¥9.3万 / ¥22.8万</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-pink" style="width:41.0%"></div>
-</div>
-</div>
-
-<div class="mini-progress">
-<div class="mini-label">
-<span>🟢 咨询 <b>40单</b> / 192单</span>
-<span>¥8.8万 / ¥37.2万</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-green" style="width:20.8%"></div>
-</div>
+  <h2>渠道进度</h2>
+  <div class="channel-row">
+    <span class="channel-name">直播</span>
+    <div class="channel-bar"><div class="progress-bar"><div class="progress-fill fill-orange" style="width:36%"></div></div></div>
+    <div><span class="channel-value">36单 ¥82,080</span><br><span class="channel-target">目标100单 ¥228,000</span></div>
+  </div>
+  <div class="channel-row">
+    <span class="channel-name">咨询</span>
+    <div class="channel-bar"><div class="progress-bar"><div class="progress-fill fill-dark" style="width:12.5%"></div></div></div>
+    <div><span class="channel-value">24单 ¥51,824</span><br><span class="channel-target">目标192单 ¥372,000</span></div>
+  </div>
 </div>
 
-<div class="mini-progress">
-<div class="mini-label">
-<span>📈 转化率 <b>26.9%</b></span>
-<span>目标 24.4%  ✅</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-blue" style="width:100.0%"></div>
-</div>
-</div>
-</div>
-
-<!-- 叶小鲲 -->
-<div class="card">
-<div class="card-title">👤 叶小鲲 <span class="target-tag">目标 ¥36.0万</span></div>
-<div style="display:flex;align-items:baseline;gap:6px;margin-bottom:10px;">
-<span style="font-size:24px;font-weight:700;color:#E65100;">¥6.1万</span>
-<span style="font-size:12px;color:#999;">完成 17.1%</span>
-</div>
-
-<div class="mini-progress">
-<div class="mini-label">
-<span>🔴 直播 <b>18单</b> / 50单</span>
-<span>¥4.1万 / ¥11.4万</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-pink" style="width:36.0%"></div>
-</div>
-</div>
-
-<div class="mini-progress">
-<div class="mini-label">
-<span>🟢 咨询 <b>10单</b> / 127单</span>
-<span>¥2.0万 / ¥24.6万</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-green" style="width:7.9%"></div>
-</div>
-</div>
+<!-- 个人拆分 -->
+<div class="person-grid">
+  <!-- 叶小鲲 -->
+  <div class="person-card">
+    <h3>叶小鲲</h3>
+    <div class="amount">¥75,128</div>
+    <div class="target">目标 ¥360,000 · 完成率 20.9%</div>
+    <div class="progress-bar" style="margin-bottom:14px"><div class="progress-fill fill-orange" style="width:20.9%"></div></div>
+    <div class="channel-row">
+      <span class="channel-name">直播</span>
+      <div style="text-align:right"><span class="channel-value">24单 ¥54,720</span><br><span class="channel-target">目标50单 ¥114,000</span></div>
+    </div>
+    <div class="channel-row">
+      <span class="channel-name">咨询</span>
+      <div style="text-align:right"><span class="channel-value">10单 ¥20,408</span><br><span class="channel-target">目标127单 ¥246,000</span></div>
+    </div>
+  </div>
+  <!-- 武艳阳 -->
+  <div class="person-card">
+    <h3>武艳阳</h3>
+    <div class="amount">¥58,776</div>
+    <div class="target">目标 ¥240,000 · 完成率 24.5%</div>
+    <div class="progress-bar" style="margin-bottom:14px"><div class="progress-fill fill-dark" style="width:24.5%"></div></div>
+    <div class="channel-row">
+      <span class="channel-name">直播</span>
+      <div style="text-align:right"><span class="channel-value">12单 ¥27,360</span><br><span class="channel-target">目标50单 ¥114,000</span></div>
+    </div>
+    <div class="channel-row">
+      <span class="channel-name">咨询</span>
+      <div style="text-align:right"><span class="channel-value">14单 ¥31,416</span><br><span class="channel-target">目标65单 ¥126,000</span></div>
+    </div>
+  </div>
 </div>
 
-<!-- 武艳阳 -->
-<div class="card">
-<div class="card-title">👤 武艳阳 <span class="target-tag">目标 ¥24.0万</span></div>
-<div style="display:flex;align-items:baseline;gap:6px;margin-bottom:10px;">
-<span style="font-size:24px;font-weight:700;color:#E65100;">¥7.2万</span>
-<span style="font-size:12px;color:#999;">完成 30.2%</span>
-</div>
-
-<div class="mini-progress">
-<div class="mini-label">
-<span>🔴 直播 <b>18单</b> / 50单</span>
-<span>¥4.1万 / ¥11.4万</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-pink" style="width:36.0%"></div>
-</div>
-</div>
-
-<div class="mini-progress">
-<div class="mini-label">
-<span>🟢 咨询 <b>14单</b> / 65单</span>
-<span>¥3.1万 / ¥12.6万</span>
-</div>
-<div class="mini-bar">
-<div class="mini-fill fill-green" style="width:21.5%"></div>
-</div>
-</div>
-</div>
-
-<div class="footer">
-舞号门 · 古法身韵 | 数据不含师资班（计入8月）
-</div>
-
-</div>
 </body>
 </html>
